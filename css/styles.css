@@ -114,6 +114,24 @@ button {
   color: #2e2f42;
 }
 
+.studio-item {
+  color: #404bbf;
+  position: relative;
+}
+
+.studio-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: #404bbf;
+  margin-top: 20px;
+  left: 0;
+  bottom: -1px;
+}
+
 .menu-link {
   font-size: 16px;
   font-weight: 500;
@@ -126,6 +144,7 @@ button {
 .menu-link:hover,
 .menu-link:focus {
   color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-list-flex {
@@ -148,6 +167,7 @@ button {
 .contact-mail:hover,
 .contact-mail:focus {
   color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 address ul a {
@@ -160,9 +180,15 @@ address ul a {
 
 /* ================ HERO ================ */
 .hero-background {
-  background-color: #2e2f42;
+  background: #2e2f42;
   height: 600px;
   padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/hero/bg.jpg");
+  background-size: cover;
 }
 
 .first-section-heading {
@@ -237,6 +263,18 @@ address ul a {
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
+
+.values-list-icon {
+  background: #f4f4fd;
+  width: 264px;
+  height: 112px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
 /* ================ /VALUES ================ */
 
 /* ================ TEAM SECTION ================ */
@@ -253,6 +291,9 @@ address ul a {
 .team-card-background {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .our-team-heading {
@@ -301,6 +342,42 @@ address ul a {
 
 .our-team-card-text {
   padding: 32px 0;
+  margin-bottom: 8px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-list-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-list-icon {
+  fill: #f4f4fd;
+}
+
+.social-links-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-links-icon:hover,
+.social-links-icon:focus {
+  background-color: #404bbf;
 }
 
 /* ================ /TEAM SECTION ================ */
@@ -335,6 +412,7 @@ address ul a {
   align-content: center;
   column-gap: 24px;
   row-gap: 48px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card {
@@ -367,6 +445,33 @@ address ul a {
   margin-bottom: 8px;
 }
 
+.portfolio-photo-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 40px 32px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-photo-wrapper:hover .overlay,
+.portfolio-photo-wrapper:focus .overlay {
+  transform: translateY(0%);
+}
+
 /* ================ /OUR PORTFOLIO SECTION ================ */
 
 /* ================ PAGE FOOTER ================ */
@@ -376,7 +481,7 @@ address ul a {
   padding-bottom: 100px;
 }
 
-.footer-container {
+.footer-logo {
   display: inline-block;
   margin-bottom: 16px;
 }
@@ -392,6 +497,35 @@ address ul a {
 
 .white-text-logo {
   color: #f4f4fd;
+}
+
+.footer-container {
+  display: flex;
+  column-gap: 120px;
+  align-items: baseline;
+}
+
+.footer-logo-wrapper {
+  margin-right: 120px;
+}
+
+.footer-wrapper {
+}
+
+.footer-text-wrapper {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.social-links-footer {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background: #2e2f42;
 }
 
 /* ================ /PAGE FOOTER ================ */
