@@ -354,6 +354,7 @@ address ul a {
   display: flex;
   justify-content: center;
   gap: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link {
@@ -363,6 +364,7 @@ address ul a {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #4d5ae5;
 }
 
 .social-list-icon {
@@ -380,8 +382,8 @@ address ul a {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-links-icon:hover,
-.social-links-icon:focus {
+.social-list-link:hover,
+.social-list-link:focus {
   background-color: #404bbf;
 }
 
@@ -426,6 +428,7 @@ address ul a {
   flex-direction: column;
   justify-content: flex-start;
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-portfolio-projects {
@@ -524,6 +527,7 @@ address ul a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  gap: 16px;
 }
 
 .social-links-footer {
